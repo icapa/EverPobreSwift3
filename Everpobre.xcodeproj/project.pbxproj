@@ -12,6 +12,13 @@
 		CF3A2F851D7F6E03007C1AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3A2F831D7F6E03007C1AF1 /* Main.storyboard */; };
 		CF3A2F871D7F6E03007C1AF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3A2F861D7F6E03007C1AF1 /* Assets.xcassets */; };
 		CF3A2F8A1D7F6E03007C1AF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3A2F881D7F6E03007C1AF1 /* LaunchScreen.storyboard */; };
+		CF3A2F971D7F72EA007C1AF1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF3A2F951D7F72EA007C1AF1 /* Model.xcdatamodeld */; };
+		CFB12A061D81E71C00EA6B5A /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A001D81E71C00EA6B5A /* Photo+CoreDataClass.swift */; };
+		CFB12A071D81E71C00EA6B5A /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A011D81E71C00EA6B5A /* Photo+CoreDataProperties.swift */; };
+		CFB12A081D81E71C00EA6B5A /* Notebook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A021D81E71C00EA6B5A /* Notebook+CoreDataClass.swift */; };
+		CFB12A091D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A031D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift */; };
+		CFB12A0A1D81E71C00EA6B5A /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A041D81E71C00EA6B5A /* Note+CoreDataClass.swift */; };
+		CFB12A0B1D81E71C00EA6B5A /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A051D81E71C00EA6B5A /* Note+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		CF3A2F861D7F6E03007C1AF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF3A2F891D7F6E03007C1AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF3A2F8B1D7F6E03007C1AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF3A2F961D7F72EA007C1AF1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CFB12A001D81E71C00EA6B5A /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataClass.swift"; path = "../Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFB12A011D81E71C00EA6B5A /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFB12A021D81E71C00EA6B5A /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataClass.swift"; path = "../Notebook+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFB12A031D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataProperties.swift"; path = "../Notebook+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFB12A041D81E71C00EA6B5A /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "../Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFB12A051D81E71C00EA6B5A /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "../Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +74,31 @@
 				CF3A2F861D7F6E03007C1AF1 /* Assets.xcassets */,
 				CF3A2F881D7F6E03007C1AF1 /* LaunchScreen.storyboard */,
 				CF3A2F8B1D7F6E03007C1AF1 /* Info.plist */,
+				CF3A2F941D7F6EAC007C1AF1 /* Model */,
 			);
 			path = Everpobre;
+			sourceTree = "<group>";
+		};
+		CF3A2F941D7F6EAC007C1AF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF3A2FA41D7F78EF007C1AF1 /* Managed */,
+				CF3A2F951D7F72EA007C1AF1 /* Model.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CF3A2FA41D7F78EF007C1AF1 /* Managed */ = {
+			isa = PBXGroup;
+			children = (
+				CFB12A001D81E71C00EA6B5A /* Photo+CoreDataClass.swift */,
+				CFB12A011D81E71C00EA6B5A /* Photo+CoreDataProperties.swift */,
+				CFB12A021D81E71C00EA6B5A /* Notebook+CoreDataClass.swift */,
+				CFB12A031D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift */,
+				CFB12A041D81E71C00EA6B5A /* Note+CoreDataClass.swift */,
+				CFB12A051D81E71C00EA6B5A /* Note+CoreDataProperties.swift */,
+			);
+			name = Managed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +175,13 @@
 			files = (
 				CF3A2F821D7F6E03007C1AF1 /* ViewController.swift in Sources */,
 				CF3A2F801D7F6E03007C1AF1 /* AppDelegate.swift in Sources */,
+				CFB12A081D81E71C00EA6B5A /* Notebook+CoreDataClass.swift in Sources */,
+				CFB12A061D81E71C00EA6B5A /* Photo+CoreDataClass.swift in Sources */,
+				CFB12A091D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift in Sources */,
+				CFB12A0A1D81E71C00EA6B5A /* Note+CoreDataClass.swift in Sources */,
+				CFB12A071D81E71C00EA6B5A /* Photo+CoreDataProperties.swift in Sources */,
+				CF3A2F971D7F72EA007C1AF1 /* Model.xcdatamodeld in Sources */,
+				CFB12A0B1D81E71C00EA6B5A /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +341,22 @@
 				CF3A2F901D7F6E03007C1AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF3A2F951D7F72EA007C1AF1 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF3A2F961D7F72EA007C1AF1 /* Model.xcdatamodel */,
+			);
+			currentVersion = CF3A2F961D7F72EA007C1AF1 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CF3A2F741D7F6E03007C1AF1 /* Project object */;
 }
