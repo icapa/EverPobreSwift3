@@ -19,6 +19,8 @@
 		CFB12A091D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A031D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift */; };
 		CFB12A0A1D81E71C00EA6B5A /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A041D81E71C00EA6B5A /* Note+CoreDataClass.swift */; };
 		CFB12A0B1D81E71C00EA6B5A /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A051D81E71C00EA6B5A /* Note+CoreDataProperties.swift */; };
+		CFB12A0D1D81EC7200EA6B5A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A0C1D81EC7200EA6B5A /* CoreDataStack.swift */; };
+		CFB12A101D81F39D00EA6B5A /* aperturaDistroLinux.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFB12A0F1D81F39D00EA6B5A /* aperturaDistroLinux.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CFB12A031D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataProperties.swift"; path = "../Notebook+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CFB12A041D81E71C00EA6B5A /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "../Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CFB12A051D81E71C00EA6B5A /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "../Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFB12A0C1D81EC7200EA6B5A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		CFB12A0F1D81F39D00EA6B5A /* aperturaDistroLinux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aperturaDistroLinux.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +72,14 @@
 		CF3A2F7E1D7F6E03007C1AF1 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				CFB12A111D82015100EA6B5A /* Resources */,
 				CF3A2F7F1D7F6E03007C1AF1 /* AppDelegate.swift */,
 				CF3A2F811D7F6E03007C1AF1 /* ViewController.swift */,
 				CF3A2F831D7F6E03007C1AF1 /* Main.storyboard */,
 				CF3A2F861D7F6E03007C1AF1 /* Assets.xcassets */,
 				CF3A2F881D7F6E03007C1AF1 /* LaunchScreen.storyboard */,
 				CF3A2F8B1D7F6E03007C1AF1 /* Info.plist */,
+				CFB12A0E1D81EC7600EA6B5A /* Core Data stack */,
 				CF3A2F941D7F6EAC007C1AF1 /* Model */,
 			);
 			path = Everpobre;
@@ -91,14 +97,30 @@
 		CF3A2FA41D7F78EF007C1AF1 /* Managed */ = {
 			isa = PBXGroup;
 			children = (
-				CFB12A001D81E71C00EA6B5A /* Photo+CoreDataClass.swift */,
-				CFB12A011D81E71C00EA6B5A /* Photo+CoreDataProperties.swift */,
 				CFB12A021D81E71C00EA6B5A /* Notebook+CoreDataClass.swift */,
 				CFB12A031D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift */,
 				CFB12A041D81E71C00EA6B5A /* Note+CoreDataClass.swift */,
 				CFB12A051D81E71C00EA6B5A /* Note+CoreDataProperties.swift */,
+				CFB12A001D81E71C00EA6B5A /* Photo+CoreDataClass.swift */,
+				CFB12A011D81E71C00EA6B5A /* Photo+CoreDataProperties.swift */,
 			);
 			name = Managed;
+			sourceTree = "<group>";
+		};
+		CFB12A0E1D81EC7600EA6B5A /* Core Data stack */ = {
+			isa = PBXGroup;
+			children = (
+				CFB12A0C1D81EC7200EA6B5A /* CoreDataStack.swift */,
+			);
+			name = "Core Data stack";
+			sourceTree = "<group>";
+		};
+		CFB12A111D82015100EA6B5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFB12A0F1D81F39D00EA6B5A /* aperturaDistroLinux.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +185,7 @@
 				CF3A2F8A1D7F6E03007C1AF1 /* LaunchScreen.storyboard in Resources */,
 				CF3A2F871D7F6E03007C1AF1 /* Assets.xcassets in Resources */,
 				CF3A2F851D7F6E03007C1AF1 /* Main.storyboard in Resources */,
+				CFB12A101D81F39D00EA6B5A /* aperturaDistroLinux.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +201,7 @@
 				CFB12A081D81E71C00EA6B5A /* Notebook+CoreDataClass.swift in Sources */,
 				CFB12A061D81E71C00EA6B5A /* Photo+CoreDataClass.swift in Sources */,
 				CFB12A091D81E71C00EA6B5A /* Notebook+CoreDataProperties.swift in Sources */,
+				CFB12A0D1D81EC7200EA6B5A /* CoreDataStack.swift in Sources */,
 				CFB12A0A1D81E71C00EA6B5A /* Note+CoreDataClass.swift in Sources */,
 				CFB12A071D81E71C00EA6B5A /* Photo+CoreDataProperties.swift in Sources */,
 				CF3A2F971D7F72EA007C1AF1 /* Model.xcdatamodeld in Sources */,

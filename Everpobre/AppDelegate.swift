@@ -7,15 +7,79 @@
 //
 
 import UIKit
+import CoreData
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let model = CoreDataStack(modelName: "Model")!
+    
+    
+    
+    
+    func trastearConDatos(){
+        // Un par de libretas
+        let nb = Notebook(name:"Watchlist",inContext: model.context)
+        let wwdc = Notebook(name: "Sesiones WWDC", inContext: model.context)
+        
+        
+        // Un par de notas
+        let img = UIImage(imageLiteralResourceName: "aperturaDistroLinux.jpg")
+        
+        let suecas = Note(notebook: nb,
+                          image: img,
+                          inContext: model.context)
+        
+        suecas.text = "Tres suecas para 3 Rodriguez"
+        
+        let expense = Note(notebook: nb, inContext: model.context)
+        expense.text = "Serie en Syfy"
+        
+        let r1 = Note(notebook: nb, inContext: model.context)
+        r1.text = "Rogue 1: A Starwars Story"
+        
+        // Búsqueda
+        let req = NSFetchRequest<Notebook>(entityName: Notebook.entityName)
+        
+        
+        req.fetchBatchSize = 50
+        
+        let notebooks = try! model.context.execute(req)
+        print(type(of: notebooks))
+        print(notebooks)
+        
+        // Filtrado y ordenadado
+        let reqn = NSFetchRequest<Note>(entityName: Note.entityName)
+        reqn.sortDescriptors = [NSSortDescriptor.init(key: "creationDate", ascending: false)]
+        
+        reqn.predicate = NSPredicate(format: "notebook == %@", nb)
+        
+        let movies = try! model.context.execute(reqn)
+        
+        // Borrar objetos
+        model.context.delete(suecas)
+        
+        
+        // Guardamos
+        model.save()
+        
+        
+        
+        
+        
+        
+        
+    }
 
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        trastearConDatos()
+        
         return true
     }
 
