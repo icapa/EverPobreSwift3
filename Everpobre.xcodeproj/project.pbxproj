@@ -13,6 +13,8 @@
 		CF3A2F871D7F6E03007C1AF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3A2F861D7F6E03007C1AF1 /* Assets.xcassets */; };
 		CF3A2F8A1D7F6E03007C1AF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3A2F881D7F6E03007C1AF1 /* LaunchScreen.storyboard */; };
 		CF3A2F971D7F72EA007C1AF1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF3A2F951D7F72EA007C1AF1 /* Model.xcdatamodeld */; };
+		CF3D3E8E1D873184000E0E24 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3D3E8D1D873184000E0E24 /* CoreDataTableViewController.swift */; };
+		CF3D3E921D873717000E0E24 /* NotebooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3D3E911D873717000E0E24 /* NotebooksViewController.swift */; };
 		CFB12A061D81E71C00EA6B5A /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A001D81E71C00EA6B5A /* Photo+CoreDataClass.swift */; };
 		CFB12A071D81E71C00EA6B5A /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A011D81E71C00EA6B5A /* Photo+CoreDataProperties.swift */; };
 		CFB12A081D81E71C00EA6B5A /* Notebook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A021D81E71C00EA6B5A /* Notebook+CoreDataClass.swift */; };
@@ -32,6 +34,8 @@
 		CF3A2F891D7F6E03007C1AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF3A2F8B1D7F6E03007C1AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF3A2F961D7F72EA007C1AF1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CF3D3E8D1D873184000E0E24 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		CF3D3E911D873717000E0E24 /* NotebooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebooksViewController.swift; sourceTree = "<group>"; };
 		CFB12A001D81E71C00EA6B5A /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataClass.swift"; path = "../Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CFB12A011D81E71C00EA6B5A /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CFB12A021D81E71C00EA6B5A /* Notebook+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataClass.swift"; path = "../Notebook+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 		CF3A2F7E1D7F6E03007C1AF1 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				CF3D3E901D8731B6000E0E24 /* Controllers */,
 				CFB12A111D82015100EA6B5A /* Resources */,
 				CF3A2F7F1D7F6E03007C1AF1 /* AppDelegate.swift */,
 				CF3A2F811D7F6E03007C1AF1 /* ViewController.swift */,
@@ -105,6 +110,15 @@
 				CFB12A011D81E71C00EA6B5A /* Photo+CoreDataProperties.swift */,
 			);
 			name = Managed;
+			sourceTree = "<group>";
+		};
+		CF3D3E901D8731B6000E0E24 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF3D3E8D1D873184000E0E24 /* CoreDataTableViewController.swift */,
+				CF3D3E911D873717000E0E24 /* NotebooksViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		CFB12A0E1D81EC7600EA6B5A /* Core Data stack */ = {
@@ -206,6 +220,8 @@
 				CFB12A071D81E71C00EA6B5A /* Photo+CoreDataProperties.swift in Sources */,
 				CF3A2F971D7F72EA007C1AF1 /* Model.xcdatamodeld in Sources */,
 				CFB12A0B1D81E71C00EA6B5A /* Note+CoreDataProperties.swift in Sources */,
+				CF3D3E8E1D873184000E0E24 /* CoreDataTableViewController.swift in Sources */,
+				CF3D3E921D873717000E0E24 /* NotebooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
