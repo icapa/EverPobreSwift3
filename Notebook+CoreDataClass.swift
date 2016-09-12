@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(Notebook)
+@objc
 public class Notebook: NSManagedObject {
     
     static let entityName = "Notebook"
@@ -31,13 +31,14 @@ public class Notebook: NSManagedObject {
 //MARK: - KVO
 
 extension Notebook{
-    @nonobjc static let observableKeys = ["name","notes"]
+    //@nonobjc static let observableKeys = ["name","notes"]
+    static func observableKeys()->[String] {return ["name","notes"]}
     
     func setupKVO(){
         // alta en las notificaciones
         // para algunas propiedades
         // Deberes: Usar una la funcion map
-        for key in Notebook.observableKeys{
+        for key in Notebook.observableKeys(){
             self.addObserver(self,
                              forKeyPath: key,
                              options: [],
@@ -47,7 +48,7 @@ extension Notebook{
     
     func tearDownKVO(){
         // Baja en todas las notificaciones
-        for key in Notebook.observableKeys{
+        for key in Notebook.observableKeys(){
             self.removeObserver(self, forKeyPath: key)
         }
     }
