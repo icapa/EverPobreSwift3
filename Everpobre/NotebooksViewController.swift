@@ -7,29 +7,42 @@
 //
 
 import UIKit
+import CoreData
 
 class NotebooksViewController: CoreDataTableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+   
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//MARK: - DataSource
+extension NotebooksViewController{
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)->UITableViewCell {
+        
+        let cellId = "NotebookCell"
+        
+        // Averiguar la libreta
+        
+        
+        
+        let nb = fetchedResultsController?.object(at: indexPath) as! Notebook
+        
+        
+        
+        // Crear la celda
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
+        if cell == nil{
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+        }
+        //Configurarla
+        
+        cell?.textLabel?.text = nb.name ?? "New Notebook"
+        let fmt = DateFormatter()
+        fmt.dateStyle = .medium
+        cell?.detailTextLabel?.text = fmt.string(from: nb.modificationDate as! Date)
+        
+        
+        //Devolvera
+        return cell!
     }
-    */
-
 }

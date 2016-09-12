@@ -37,9 +37,18 @@ class CoreDataTableViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
     
+    // -- Esto es una ñapa para que tire --
+    // MARK: - View lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        fetchedResultsController?.delegate = self
+        executeSearch()
+        tableView.reloadData()
+
+    }
     
 }
-
 
 
 // MARK:  - Subclass responsability
@@ -56,7 +65,11 @@ extension CoreDataTableViewController{
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         if let fc = fetchedResultsController{
-            return (fc.sections?.count)!;
+            guard let sections = fc.sections else{
+                return 1
+            }
+            return sections.count
+            
         }else{
             return 0
         }
@@ -72,7 +85,8 @@ extension CoreDataTableViewController{
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if let fc = fetchedResultsController{
-            return fc.sections![section].name;
+            
+            return fc.sections?[section].name;
         }else{
             return nil
         }

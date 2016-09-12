@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 @objc
-public class Notebook: NSManagedObject {
+public class Notebook: NSManagedObject{
     
     static let entityName = "Notebook"
     
@@ -21,7 +21,8 @@ public class Notebook: NSManagedObject {
         //llamamos a super
         super.init(entity: entity, insertInto: context)
         
-        // Asignamos valores a las fechas
+        // Asignamos valores a las fechas y el nombre
+        self.name = name
         creationDate = NSDate()
         modificationDate = NSDate()
         
@@ -83,4 +84,4 @@ extension Notebook{
         tearDownKVO()
     }
 }
- 
+

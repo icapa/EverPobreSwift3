@@ -17,6 +17,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let model = CoreDataStack(modelName: "Model")!
     
     
+    func loadDummyData(){
+        // Borrón y cuenta nueva
+        do{
+            try model.dropAllData()
+        }catch{
+            print("La cagamos al borrar")
+        }
+        
+        // Un par de libretas
+        let pelis = Notebook(name: "Pelis de los 80", inContext: model.context)
+        let wwdc = Notebook(name:"Sesiones WWDC", inContext:model.context)
+        
+        // Unas notas
+        let axel = Note(notebook: pelis, inContext: model.context)
+        axel.text="Berverly Hill's Cop"
+        let strike = Note(notebook: pelis, inContext: model.context)
+        strike.text="The Empire Strikes Back"
+        
+        let async = Note(notebook: wwdc, inContext: model.context)
+        async.text="Asynchronous Development Patterns"
+
+        // Guardamos
+        model.save()
+        
+        
+    }
     
     
     func trastearConDatos(){
@@ -24,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nb = Notebook(name:"Watchlist",inContext: model.context)
         let wwdc = Notebook(name: "Sesiones WWDC", inContext: model.context)
         
+        
+        print(wwdc)
         
         // Un par de notas
         let img = UIImage(imageLiteralResourceName: "aperturaDistroLinux.jpg")
@@ -58,6 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let movies = try! model.context.execute(reqn)
         
+        print(movies)
         // Borrar objetos
         model.context.delete(suecas)
         
@@ -76,9 +105,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
-        trastearConDatos()
+        // Creamos datos chorras
+        loadDummyData()
+        
+        // Creamos el fetchRequest
+        let fr = NSFetchRequest<Notebook>(entityName: Notebook.entityName)
+        fr.fetchBatchSize = 50
+        fr.sortDescriptors = [NSSortDescriptor(key: "name",
+                              ascending: false),
+            NSSortDescriptor(key: "modificationDate", ascending: true) ]
+        // Creamos el fetchedResultsCtrl
+        
+        let fc = NSFetchedResultsController(fetchRequest: fr, managedObjectContext: model.context, sectionNameKeyPath: nil, cacheName:  nil)
+        // Creamos el rootVC
+        let nVC = NotebooksViewController(fetchedResultsController: fc as! NSFetchedResultsController<NSFetchRequestResult>, style: .plain)
+        
+        // Creamos el navegador
+        let navVC = UINavigationController(rootViewController: nVC)
+        
+        
+        // Creamos la window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navVC
+        window?.makeKeyAndVisible()
+        
+        
+        // Lo encasquetamos el rootVC a la window y mostramos
+        
+
+        
+        loadDummyData()
+        
         
         return true
     }

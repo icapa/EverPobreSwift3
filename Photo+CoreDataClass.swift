@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-@objc(Photo)
+@objc
 public class Photo: NSManagedObject {
     static let entityName = "Photo"
     
@@ -23,7 +23,18 @@ public class Photo: NSManagedObject {
         }
     }
     
-    init (note: Note, image: UIImage, inContext context: NSManagedObjectContext){
+    /*
+    @objc
+    private override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
+    }
+    */
+    
+    
+    init (note: Note,
+          image: UIImage,
+          inContext context: NSManagedObjectContext){
+        
         let ent = NSEntityDescription.entity(forEntityName: Photo.entityName, in: context)!
         
         super.init(entity: ent, insertInto: context)
@@ -32,12 +43,15 @@ public class Photo: NSManagedObject {
         addToNotes(note)
         
         // Transformo UIImage en un data y lo encasqueto
+        self.image = image
     }
+    
     
     init(note: Note, inContext context: NSManagedObjectContext){
         let ent = NSEntityDescription.entity(forEntityName: Photo.entityName, in: context)!
         super.init(entity: ent, insertInto: context)
         addToNotes(note)
-        
     }
+    
+    
 }
