@@ -14,12 +14,12 @@ public class Notebook: NSManagedObject{
     
     static let entityName = "Notebook"
     
-    init(name: String, inContext context: NSManagedObjectContext){
+    convenience init(name: String, inContext context: NSManagedObjectContext){
         // Necesitamos la entidad de Notebook
         let entity = NSEntityDescription.entity(forEntityName: Notebook.entityName, in: context)!
         
         //llamamos a super
-        super.init(entity: entity, insertInto: context)
+        self.init(entity: entity, insertInto: context)
         
         // Asignamos valores a las fechas y el nombre
         self.name = name

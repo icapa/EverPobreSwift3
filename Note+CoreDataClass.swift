@@ -14,7 +14,7 @@ import UIKit
 public class Note: NSManagedObject {
     static let entityName = "Note"
     
-    init(notebook: Notebook,
+    convenience init(notebook: Notebook,
          image: UIImage,
          inContext context: NSManagedObjectContext){
        
@@ -22,7 +22,7 @@ public class Note: NSManagedObject {
         // Obtenemos la entity description
         let entity = NSEntityDescription.entity(forEntityName: Note.entityName, in: context)!
         // Llamamos a super
-        super.init(entity: entity, insertInto: context)
+        self.init(entity: entity, insertInto: context)
         // Asignamos propiedades
         self.notebook = notebook
         creationDate = NSDate()
@@ -33,11 +33,11 @@ public class Note: NSManagedObject {
         
     }
     
-    init (notebook: Notebook,
+    convenience init (notebook: Notebook,
         inContext context: NSManagedObjectContext){
         // Obtenemos la entity description
         let entity = NSEntityDescription.entity(forEntityName: Note.entityName, in: context)!
-        super.init(entity: entity, insertInto: context)
+        self.init(entity: entity, insertInto: context)
         self.notebook = notebook
         creationDate = NSDate()
         modificationDate = NSDate()
