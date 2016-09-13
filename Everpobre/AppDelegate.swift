@@ -74,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         req.fetchBatchSize = 50
         
-        let notebooks = try! model.context.execute(req)
+        let notebooks = try! model.context.fetch(req)
         print(type(of: notebooks))
         print(notebooks)
         
@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         reqn.predicate = NSPredicate(format: "notebook == %@", nb)
         
-        let movies = try! model.context.execute(reqn)
+        let movies = try! model.context.fetch(reqn)
         
         print(movies)
         // Borrar objetos
@@ -135,7 +135,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         
-        loadDummyData()
+        //loadDummyData()
         
         
         return true

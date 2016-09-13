@@ -24,9 +24,13 @@ class CoreDataTableViewController: UITableViewController {
     
     init(fetchedResultsController fc : NSFetchedResultsController<NSFetchRequestResult>,
         style : UITableViewStyle = .plain){
-            fetchedResultsController = fc
+        
             super.init(style: style)
-            
+        
+        defer{
+            fetchedResultsController = fc
+           
+        }
             
     }
     
@@ -42,10 +46,6 @@ class CoreDataTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchedResultsController?.delegate = self
-        executeSearch()
-        tableView.reloadData()
-
     }
     
 }
