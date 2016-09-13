@@ -14,12 +14,19 @@ import UIKit
 public class Photo: NSManagedObject {
     static let entityName = "Photo"
     
-    var image : UIImage{
+    var image : UIImage?{
         get{
-            return UIImage(data: photoData! as Data)!
+            guard let data = photoData else{
+                return nil
+            }
+            return UIImage(data: data as Data)!
         }
         set{
-            photoData = UIImageJPEGRepresentation(newValue, 0.9) as NSData?
+            guard let img = newValue else{
+                photoData = nil
+                return
+            }
+            photoData = UIImageJPEGRepresentation(img, 0.9) as NSData?
         }
     }
     

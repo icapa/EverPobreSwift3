@@ -17,6 +17,16 @@ class NotebooksViewController: CoreDataTableViewController {
 
 //MARK: - DataSource
 extension NotebooksViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Everpobre"
+        
+        addNewNotebookButton()
+    }
+    
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)->UITableViewCell {
         
         let cellId = "NotebookCell"
@@ -44,5 +54,47 @@ extension NotebooksViewController{
         
         //Devolvera
         return cell!
+    }
+    
+    //MARK: - Utils
+    func  addNewNotebookButton(){
+        let btn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewNotebook))
+        navigationItem.rightBarButtonItem = btn
+    }
+    
+    //MARK: - Actions
+    func addNewNotebook(){
+        // Crear una nueva libreta
+        guard let fc = fetchedResultsController else{
+            return
+        }
+        
+        let _ = Notebook(name: "Nueva libreta", inContext: fc.managedObjectContext)
+        
+    }
+    
+    //MARK: - Delegate
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        // Averiguar la libreta
+        let nb = fetchedResultsController?.object(at: indexPath) as! Notebook
+        
+        // Crear el fetch
+        let req = NSFetchRequest<Note>(entityName: Note.entityName)
+        req.fetchBatchSize = 50
+        req.predicate = NSPredicate(format: "notebook == %@", nb)
+        req.sortDescriptors = [NSSortDescriptor(key: "modificationDate", ascending: false)]
+        
+        // El fetchedResultsController
+        let fc = NSFetchedResultsController(fetchRequest: req,
+                                            managedObjectContext: nb.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        
+        // Crea el controlador
+        
+        let notesVC = NotesViewController(fetchedResultsController: fc as! NSFetchedResultsController<NSFetchRequestResult>)
+        
+        // Mostrarlo
+        navigationController?.pushViewController(notesVC, animated: true)
+        
     }
 }

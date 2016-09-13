@@ -95,11 +95,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         model.save()
         
         
-        
-        
-        
-        
-        
     }
 
     
