@@ -41,8 +41,17 @@ class NotesViewController: CoreDataTableViewController {
         return cell!
     }
    
-}
-
-extension NotesViewController{
-    
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        // Averiguar la nota
+        let nt = fetchedResultsController?.object(at: indexPath) as! Note
+        
+        // Crear el VC de la nota
+        
+        let vc = NoteViewController(model: nt)
+        
+        // Mostrarlo
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
 }
