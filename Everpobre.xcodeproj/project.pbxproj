@@ -13,6 +13,8 @@
 		CF26D5561D8899CE00A060D8 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26D5551D8899CE00A060D8 /* NotesViewController.swift */; };
 		CF26D5591D88A42F00A060D8 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26D5571D88A42F00A060D8 /* NoteViewController.swift */; };
 		CF26D55A1D88A42F00A060D8 /* NoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF26D5581D88A42F00A060D8 /* NoteViewController.xib */; };
+		CF26D55D1D88ACF600A060D8 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26D55B1D88ACF600A060D8 /* PhotoViewController.swift */; };
+		CF26D55E1D88ACF600A060D8 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF26D55C1D88ACF600A060D8 /* PhotoViewController.xib */; };
 		CF3A2F801D7F6E03007C1AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A2F7F1D7F6E03007C1AF1 /* AppDelegate.swift */; };
 		CF3A2F821D7F6E03007C1AF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A2F811D7F6E03007C1AF1 /* ViewController.swift */; };
 		CF3A2F851D7F6E03007C1AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3A2F831D7F6E03007C1AF1 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		CF26D5551D8899CE00A060D8 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		CF26D5571D88A42F00A060D8 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		CF26D5581D88A42F00A060D8 /* NoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteViewController.xib; sourceTree = "<group>"; };
+		CF26D55B1D88ACF600A060D8 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		CF26D55C1D88ACF600A060D8 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		CF3A2F7C1D7F6E03007C1AF1 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3A2F7F1D7F6E03007C1AF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF3A2F811D7F6E03007C1AF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				CF26D5551D8899CE00A060D8 /* NotesViewController.swift */,
 				CF26D5571D88A42F00A060D8 /* NoteViewController.swift */,
 				CF26D5581D88A42F00A060D8 /* NoteViewController.xib */,
+				CF26D55B1D88ACF600A060D8 /* PhotoViewController.swift */,
+				CF26D55C1D88ACF600A060D8 /* PhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 				CF3A2F8A1D7F6E03007C1AF1 /* LaunchScreen.storyboard in Resources */,
 				CF3A2F871D7F6E03007C1AF1 /* Assets.xcassets in Resources */,
 				CF3A2F851D7F6E03007C1AF1 /* Main.storyboard in Resources */,
+				CF26D55E1D88ACF600A060D8 /* PhotoViewController.xib in Resources */,
 				CF26D55A1D88A42F00A060D8 /* NoteViewController.xib in Resources */,
 				CFB12A101D81F39D00EA6B5A /* aperturaDistroLinux.jpg in Resources */,
 			);
@@ -234,6 +241,7 @@
 				CF3D3E8E1D873184000E0E24 /* CoreDataTableViewController.swift in Sources */,
 				CF3D3E921D873717000E0E24 /* NotebooksViewController.swift in Sources */,
 				CF26D5521D887F2400A060D8 /* Note+CoreDataProperties.swift in Sources */,
+				CF26D55D1D88ACF600A060D8 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

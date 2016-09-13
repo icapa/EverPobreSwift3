@@ -30,8 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let wwdc = Notebook(name:"Sesiones WWDC", inContext:model.context)
         
         // Unas notas
-        let axel = Note(notebook: pelis, inContext: model.context)
+        
+        
+        let axel = Note(notebook: pelis,
+                        image:UIImage(imageLiteralResourceName: "aperturaDistroLinux.jpg"),
+                        inContext: model.context)
         axel.text="Berverly Hill's Cop"
+        
+        
+        
+        
         let strike = Note(notebook: pelis, inContext: model.context)
         strike.text="The Empire Strikes Back"
         
