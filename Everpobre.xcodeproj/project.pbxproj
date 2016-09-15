@@ -54,6 +54,7 @@
 		CFB12A041D81E71C00EA6B5A /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "../Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CFB12A0C1D81EC7200EA6B5A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		CFB12A0F1D81F39D00EA6B5A /* aperturaDistroLinux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aperturaDistroLinux.jpg; sourceTree = "<group>"; };
+		CFEF8DD51D8B528000286442 /* Model2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model2.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,9 +410,10 @@
 		CF3A2F951D7F72EA007C1AF1 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				CFEF8DD51D8B528000286442 /* Model2.xcdatamodel */,
 				CF3A2F961D7F72EA007C1AF1 /* Model.xcdatamodel */,
 			);
-			currentVersion = CF3A2F961D7F72EA007C1AF1 /* Model.xcdatamodel */;
+			currentVersion = CFEF8DD51D8B528000286442 /* Model2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

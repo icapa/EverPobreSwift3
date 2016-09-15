@@ -38,17 +38,13 @@ class PhotoViewController: UIViewController {
         let finaImg = vintage?.value(forKey: kCIOutputImageKey) as! CIImage
         
         // Aquí es donde se aplica el filtro y que consume tiempo
+        // Cuello de botella
+        
         let res = ctxt.createCGImage(finaImg, from: finaImg.extent)
         
         let viewImage = UIImage(cgImage: res!)
         photoView.image = viewImage
-        
-        
-        
-        
-        
-        
-        
+      
     }
     
     
