@@ -13,6 +13,23 @@ class PhotoViewController: UIViewController {
     var model : Note
     
     @IBAction func deletePhoto(_ sender: AnyObject) {
+       
+        let oldBounds = self.photoView.bounds
+        
+        // Animacion
+        UIView.animate(withDuration: 0.9,
+                       animations: {
+                        self.photoView.alpha = 0
+                        self.photoView.bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
+                        self.photoView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_4))
+             }){(finished: Bool) in
+                self.photoView.bounds = oldBounds
+                self.photoView.transform = CGAffineTransform(rotationAngle: CGFloat(0))
+                self.photoView.alpha = 1
+                self.model.photo?.image=nil
+                self.syncModelView()
+
+        }
     }
     
     @IBAction func takePhoto(_ sender: AnyObject) {
