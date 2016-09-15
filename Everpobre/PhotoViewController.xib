@@ -24,6 +24,12 @@
                                 <action selector="takePhoto:" destination="-1" id="SYI-IZ-5hp"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2gw-qV-ZRM"/>
+                        <barButtonItem title="Vintage" id="MV1-mD-wFQ">
+                            <connections>
+                                <action selector="applyFilter:" destination="-1" id="Z6e-Mr-nCs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="rS2-Fl-w7M"/>
                         <barButtonItem systemItem="trash" id="1ak-tU-0Lh">
                             <connections>

@@ -7,10 +7,50 @@
 //
 
 import UIKit
+import CoreImage
+
 
 class PhotoViewController: UIViewController {
 
     var model : Note
+    
+    @IBAction func applyFilter(_ sender: AnyObject) {
+        guard let image = photoView.image else{
+            return
+        }
+        
+       
+        
+        // CIImage, Context, CIFilter
+        
+        // Imagen de entrada
+        let img = CIImage(image: image)
+        
+        // Contexto: el que crea la imagen final
+        let ctxt = CIContext(options: nil)
+        
+        // Filtro (usado por el contexto)
+        let vintage = CIFilter(name:"CIFalseColor")
+        vintage?.setDefaults()
+        vintage?.setValue(img, forKey: "inputImage")
+        
+        // La imagen final
+        let finaImg = vintage?.value(forKey: kCIOutputImageKey) as! CIImage
+        
+        // Aquí es donde se aplica el filtro y que consume tiempo
+        let res = ctxt.createCGImage(finaImg, from: finaImg.extent)
+        
+        let viewImage = UIImage(cgImage: res!)
+        photoView.image = viewImage
+        
+        
+        
+        
+        
+        
+        
+    }
+    
     
     @IBAction func deletePhoto(_ sender: AnyObject) {
        
