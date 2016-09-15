@@ -2,13 +2,13 @@
 //  Note+CoreDataProperties.swift
 //  Everpobre
 //
-//  Created by Iván Cayón Palacio on 13/9/16.
+//  Created by Iván Cayón Palacio on 16/9/16.
 //  Copyright © 2016 KeepCoding. All rights reserved.
 //
 
 import Foundation
 import CoreData
-import CoreData
+
 
 extension Note {
 
@@ -21,5 +21,6 @@ extension Note {
     @NSManaged public var text: String?
     @NSManaged public var notebook: Notebook?
     @NSManaged public var photo: Photo?
+    @NSManaged public var location: Location?
 
 }

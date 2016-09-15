@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF26D5521D887F2400A060D8 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26D54F1D887F2400A060D8 /* Note+CoreDataProperties.swift */; };
 		CF26D5531D887F2400A060D8 /* Notebook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26D5501D887F2400A060D8 /* Notebook+CoreDataProperties.swift */; };
 		CF26D5541D887F2400A060D8 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26D5511D887F2400A060D8 /* Photo+CoreDataProperties.swift */; };
 		CF26D5561D8899CE00A060D8 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26D5551D8899CE00A060D8 /* NotesViewController.swift */; };
@@ -28,10 +27,12 @@
 		CFB12A0A1D81E71C00EA6B5A /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A041D81E71C00EA6B5A /* Note+CoreDataClass.swift */; };
 		CFB12A0D1D81EC7200EA6B5A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB12A0C1D81EC7200EA6B5A /* CoreDataStack.swift */; };
 		CFB12A101D81F39D00EA6B5A /* aperturaDistroLinux.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFB12A0F1D81F39D00EA6B5A /* aperturaDistroLinux.jpg */; };
+		CFEF8DD81D8B545E00286442 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF8DD61D8B545E00286442 /* Location+CoreDataClass.swift */; };
+		CFEF8DD91D8B545E00286442 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF8DD71D8B545E00286442 /* Location+CoreDataProperties.swift */; };
+		CFEF8DDD1D8B564600286442 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF8DDC1D8B564600286442 /* Note+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF26D54F1D887F2400A060D8 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "../Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CF26D5501D887F2400A060D8 /* Notebook+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notebook+CoreDataProperties.swift"; path = "../Notebook+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CF26D5511D887F2400A060D8 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CF26D5551D8899CE00A060D8 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +56,9 @@
 		CFB12A0C1D81EC7200EA6B5A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		CFB12A0F1D81F39D00EA6B5A /* aperturaDistroLinux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aperturaDistroLinux.jpg; sourceTree = "<group>"; };
 		CFEF8DD51D8B528000286442 /* Model2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model2.xcdatamodel; sourceTree = "<group>"; };
+		CFEF8DD61D8B545E00286442 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Location+CoreDataClass.swift"; path = "../Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFEF8DD71D8B545E00286442 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Location+CoreDataProperties.swift"; path = "../Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFEF8DDC1D8B564600286442 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "../Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +117,9 @@
 		CF3A2FA41D7F78EF007C1AF1 /* Managed */ = {
 			isa = PBXGroup;
 			children = (
-				CF26D54F1D887F2400A060D8 /* Note+CoreDataProperties.swift */,
+				CFEF8DDC1D8B564600286442 /* Note+CoreDataProperties.swift */,
+				CFEF8DD61D8B545E00286442 /* Location+CoreDataClass.swift */,
+				CFEF8DD71D8B545E00286442 /* Location+CoreDataProperties.swift */,
 				CFB12A041D81E71C00EA6B5A /* Note+CoreDataClass.swift */,
 				CF26D5501D887F2400A060D8 /* Notebook+CoreDataProperties.swift */,
 				CFB12A021D81E71C00EA6B5A /* Notebook+CoreDataClass.swift */,
@@ -232,16 +238,18 @@
 				CF3A2F821D7F6E03007C1AF1 /* ViewController.swift in Sources */,
 				CF3A2F801D7F6E03007C1AF1 /* AppDelegate.swift in Sources */,
 				CF26D5531D887F2400A060D8 /* Notebook+CoreDataProperties.swift in Sources */,
+				CFEF8DD81D8B545E00286442 /* Location+CoreDataClass.swift in Sources */,
 				CFB12A081D81E71C00EA6B5A /* Notebook+CoreDataClass.swift in Sources */,
 				CFB12A061D81E71C00EA6B5A /* Photo+CoreDataClass.swift in Sources */,
 				CFB12A0D1D81EC7200EA6B5A /* CoreDataStack.swift in Sources */,
 				CF26D5541D887F2400A060D8 /* Photo+CoreDataProperties.swift in Sources */,
 				CF26D5561D8899CE00A060D8 /* NotesViewController.swift in Sources */,
+				CFEF8DDD1D8B564600286442 /* Note+CoreDataProperties.swift in Sources */,
 				CFB12A0A1D81E71C00EA6B5A /* Note+CoreDataClass.swift in Sources */,
 				CF3A2F971D7F72EA007C1AF1 /* Model.xcdatamodeld in Sources */,
+				CFEF8DD91D8B545E00286442 /* Location+CoreDataProperties.swift in Sources */,
 				CF3D3E8E1D873184000E0E24 /* CoreDataTableViewController.swift in Sources */,
 				CF3D3E921D873717000E0E24 /* NotebooksViewController.swift in Sources */,
-				CF26D5521D887F2400A060D8 /* Note+CoreDataProperties.swift in Sources */,
 				CF26D55D1D88ACF600A060D8 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
